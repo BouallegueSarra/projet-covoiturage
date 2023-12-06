@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+  <link rel="stylesheet" href="style.css" />
+
+<title>Inscription</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+<script type="text/javascript" src="javascript.js"></script>
+
+
+
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navcol-1">
+			<ul class="nav navbar-nav w-100 justify-content-between">
+				<li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="/">Accueil</a>
+				</li>
+				<li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="listeAnnonce">Les annonces</a>
+				</li>
+				<li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" data-display="static" aria-expanded="false" href="listeVoiture">Les voitures</a>
+				</li>
+				<li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" data-display="static" aria-expanded="false" href="contact">Contacts</a>
+				</li>
+				<li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" data-display="static" aria-expanded="false" href="registreForm">Inscription</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+ <br>
+ 
+ <h3 class="titre1">Inscription</h3><br>
+        <div class="bloc2"></div> <br>
+
+
+
+
+
+
+
+<section id="cover">
+    <div id="cover-caption">
+        <div id="container" class="container">
+            <div class="row">
+                <div class="col-sm-7 offset-sm-2 ">
+                    <div class="info-form">
+                        <form  class="form-inline justify-content-center" th:action="@{/register}" th:object="${conducteur}" method="post">
+                            <div class="form-group">
+                                <label class="sr-only">Nom</label>
+                                <input type="text" class="form-control" name="nom" id="nom">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Prenom</label>
+                                <input type="text" class="form-control" name="prenom" id="prenom">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Adresse</label>
+                                <input type="text" class="form-control" name="adresse" id="adresse">
+                            </div>
+                                       <label for="genre" class="form-label">Genre</label>
+     
+     <div class="form-group">
+  <input class="form-check-input" type="radio" name="genre"  value="femme" >
+  <label class="form-check-label" for="exampleRadios1"> Femme </label>
+</div>
+<div class="form-group">
+  <input class="form-check-input" type="radio" name="genre" value="homme">
+  <label class="form-check-label" for="exampleRadios2"> Homme </label>
+</div>
+     
+                            
+                            <div class="form-group">
+                                <label class="sr-only">Date de naissance</label>
+                                <input type="date" class="form-control" id="date_depart" name="date_naissance">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Adresse email</label>
+                                <input type="email" class="form-control" name="email"id="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Mot de passe </label>
+                                <input type="password" class="form-control" name="motpasse" id="motpasse">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Permis</label>
+                                <input type="text" class="form-control" name="permis" id="permis">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Numero de telephone</label>
+                                <input type="text" class="form-control" name="telephone" id="telephone">
+                            </div><br>
+                            				  <div class="col-sm-9 offset-sm-8">
+                            
+                            <button type="submit" class="btn btn-success ">S'inscrire</button></div>
+                        </form>
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
